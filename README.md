@@ -66,9 +66,9 @@ paddlepaddle安装成功后，使用pip install -r requirements.txt安装依赖�
 ### 3.2 准备数据
 
 使用的数据集已在AIStudio上公开，地址如下
-[训练集](url): 真实数据由ICDAR2013, ICDAR2015, IIIT5K, COCO-Text的训练集组成。
+[训练集](https://aistudio.baidu.com/aistudio/datasetdetail/138433): 真实数据由ICDAR2013, ICDAR2015, IIIT5K, COCO-Text的训练集组成。
 合成数据由Synth90K(240W)， SynthAdd(121W)， Synth800K(240W), synthadd组成
-[测试集](url)：包含规则文本（IIIT5K、SVT、ICDAR2013）和不规则文本（ICDAR2015、SVTP、CUTE80）组成
+[测试集](https://aistudio.baidu.com/aistudio/datasetdetail/138872)：包含规则文本（IIIT5K、SVT、ICDAR2013）和不规则文本（ICDAR2015、SVTP、CUTE80）组成
 
 为方便存储，所有数据都已经打包成lmdb格式。
 
@@ -117,7 +117,8 @@ Eval:
     ...
 ```
 如果您安装的是cpu版本，请将配置文件中的 `use_gpu` 字段修改为false
-为了方便体验，本示例提供了toy_data来简单训练。
+为了方便体验，本示例提供了toy_data(链接：https://pan.baidu.com/s/1IXVRqRSuGQFouAMLrgNOXA 
+提取码：no4x)来简单训练。
 若要训练完整数据集，请下载完整数据，并修改配置文件中的data_dir。
 ```
 # GPU训练 支持单卡，多卡训练
@@ -145,8 +146,8 @@ output/rec/
 ```
 其中 best_accuracy.* 是评估集上的最优模型；iter_epoch_x.* 是以 `save_epoch_step` 为间隔保存下来的模型；latest.* 是最后一个epoch的模型。
 
-本复现训练好的模型权重及训练日志地址为(链接：https://pan.baidu.com/s/1boyxRVCX58ZGJkNNdqmD3Q 
-提取码：6vvs), 下载完成后，将文件夹里面的文件全部拷贝到./inference/rec_r31_robustscanner,以方便后续描述
+本复现训练好的模型权重及训练日志地址为(链接：https://pan.baidu.com/s/1IXVRqRSuGQFouAMLrgNOXA 
+提取码：no4x), 下载完成后，将文件夹里面的文件全部拷贝到./inference/rec_r31_robustscanner,以方便后续描述
 
 ### 4.2 模型评估
 
