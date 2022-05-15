@@ -38,7 +38,7 @@ RobustScannerz收录于ECVV2020，它研究了注意框架编解码器译码过�
 
 ## 2. 数据集和复现精度
 
-本复现采用的训练数据集和测试数据集参考[mmocr文档](https://mmocr.readthedocs.io/zh_CN/latest/textrecog_models.html#robustscanner)。(其中icdar2011未下载到且其大多数包含在icdar3中，所以本复现没有使用)
+本复现采用的训练数据集和测试数据集参考[mmocr文档](https://mmocr.readthedocs.io/zh_CN/latest/textrecog_models.html#robustscanner)。(其中icdar2011未下载到且其大多数包含在icdar2015中，所以本复现没有使用)
 
 本复现的效果如下
 |           |                 数据集                  | IIIT5K | SVT  | IC13 | IC15 | SVTP | CT80 | Avg   |
