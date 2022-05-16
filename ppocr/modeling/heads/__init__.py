@@ -31,7 +31,7 @@ def build_head(config):
     from .rec_sar_head import SARHead
     from .rec_aster_head import AsterHead
     from .rec_robustscanner_head import RobustScannerHead
-    from .rec_satrn_head import STARNHead
+    # from .rec_satrn_head import STARNHead
 
     # cls head
     from .cls_head import ClsHead
@@ -45,7 +45,7 @@ def build_head(config):
         'DBHead', 'PSEHead', 'EASTHead', 'SASTHead', 'CTCHead', 'ClsHead',
         'AttentionHead', 'SRNHead', 'PGHead', 'Transformer',
         'TableAttentionHead', 'SARHead', 'AsterHead', 'SDMGRHead', 
-        'BiAttentionHead', 'RobustScannerHead', 'STARNHead'
+        'BiAttentionHead', 'RobustScannerHead', 
     ]
 
     #table head
