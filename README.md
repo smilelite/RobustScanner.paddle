@@ -147,7 +147,7 @@ output/rec/
 其中 best_accuracy.* 是评估集上的最优模型；iter_epoch_x.* 是以 `save_epoch_step` 为间隔保存下来的模型；latest.* 是最后一个epoch的模型。
 
 本复现训练好的模型权重及训练日志地址为(链接：https://pan.baidu.com/s/1IXVRqRSuGQFouAMLrgNOXA 
-提取码：no4x), 下载完成后，将rec_r31_robustscanner_submit.zip文件加压，然后文件夹里面的文件全部拷贝到./inference/rec_r31_robustscanner,以方便后续部署
+提取码：no4x), 下载完成后，将rec_r31_robustscanner_submit.zip文件解压，然后文件夹里面的文件全部拷贝到./inference/rec_r31_robustscanner,以方便后续部署
 
 ### 4.2 模型评估
 
@@ -219,10 +219,6 @@ bash test_tipc/test_train_inference_python.sh configs/[model_name]/[params_file_
 
 关于本复现，tipc配置文件已经给出
 test_tipc/configs/rec_r31_robustscanner，可以通过查看train_infer_python.txt的内容来了解tipc的具体流程和配置。
-
-需要注意的是在train_infer_python.txt中有关于模型和推理图片的配置
-`train_infer_img_dir:./inference/rec_inference`
-`train_model:./inference/rec_r31_robustscanner/best_accuracy`
 
 
 ```shell
