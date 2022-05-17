@@ -10,6 +10,7 @@ __pycache__/
 inference/rec_r31_robustscanner
 inference_results/
 output/
+train_data
 
 *.DS_Store
 *.vs

@@ -73,7 +73,9 @@ class TextRecognizer(object):
             postprocess_params = {
                 'name': 'SARLabelDecode',
                 "character_dict_path": args.rec_char_dict_path,
-                "use_space_char": args.use_space_char
+                "use_space_char": args.use_space_char,
+                "rm_symbol": True
+                
             }
         self.postprocess_op = build_post_process(postprocess_params)
         self.predictor, self.input_tensor, self.output_tensors, self.config = \
@@ -372,7 +374,6 @@ class TextRecognizer(object):
                     norm_img_batch,
                     valid_ratios,
                     word_positions_list
-
                 ]
                 
                 if self.use_onnx:

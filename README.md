@@ -147,7 +147,7 @@ output/rec/
 其中 best_accuracy.* 是评估集上的最优模型；iter_epoch_x.* 是以 `save_epoch_step` 为间隔保存下来的模型；latest.* 是最后一个epoch的模型。
 
 本复现训练好的模型权重及训练日志地址为(链接：https://pan.baidu.com/s/1IXVRqRSuGQFouAMLrgNOXA 
-提取码：no4x), 下载完成后，将文件夹里面的文件全部拷贝到./inference/rec_r31_robustscanner,以方便后续描述
+提取码：no4x), 下载完成后，将rec_r31_robustscanner_submit.zip文件加压，然后文件夹里面的文件全部拷贝到./inference/rec_r31_robustscanner,以方便后续部署
 
 ### 4.2 模型评估
 
@@ -214,16 +214,10 @@ bash test_tipc/prepare.sh  configs/[model_name]/[params_file_name]  [Mode]
 bash test_tipc/test_train_inference_python.sh configs/[model_name]/[params_file_name]  [Mode]
 ```
 
-例如，测试基本训练预测功能的`lite_train_lite_infer`模式，运行：
-```shell
-# 准备数据
-bash test_tipc/prepare.sh ./test_tipc/configs/ch_ppocr_mobile_v2.0_det/train_infer_python.txt 'lite_train_lite_infer'
-# 运行测试
-bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/ch_ppocr_mobile_v2.0_det/train_infer_python.txt 'lite_train_lite_infer'
-```
+
 更多信息可查看[基础训练预测使用文档](https://github.com/PaddlePaddle/PaddleOCR/blob/dygraph/test_tipc/docs/test_train_inference_python.md#22-%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95)。
 
-关于本复现，tipc配置文件已经给出，暂不提供数据准备和下载
+关于本复现，tipc配置文件已经给出
 test_tipc/configs/rec_r31_robustscanner，可以通过查看train_infer_python.txt的内容来了解tipc的具体流程和配置。
 
 需要注意的是在train_infer_python.txt中有关于模型和推理图片的配置
@@ -232,13 +226,10 @@ test_tipc/configs/rec_r31_robustscanner，可以通过查看train_infer_python.t
 
 
 ```shell
+# 准备数据
+bash test_tipc/prepare.sh ./test_tipc/configs/rec_r31_robustscanner/train_infer_python.txt 'lite_train_lite_infer'
 # 运行lite_train_lite_infer模式，
 bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/rec_r31_robustscanner/train_infer_python.txt 'lite_train_lite_infer'
-```
-
-```shell
-# 运行whole_infer模式，
-bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/rec_r31_robustscanner/train_infer_python.txt 'whole_infer'
 ```
 
 ## 7. LICENSE
